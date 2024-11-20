@@ -35,15 +35,15 @@ Prerequisites
 
 Installation
 
-	1.	Clone the repository:
+1.	Clone the repository:
 
-git clone https://github.com/your-username/codegen-llm.git
-cd codegen-llm
+		git clone https://github.com/your-username/codegen-llm.git
+		cd codegen-llm
 
 
-	2.	Install dependencies:
+2.	Install dependencies:
 
-pip install -r requirements.txt
+		pip install -r requirements.txt
 
 🛠️ Usage
 
@@ -51,9 +51,9 @@ pip install -r requirements.txt
 
 Run scripts to scrape data:
 
-python scripts/scrape_github.py
-python scripts/scrape_stackoverflow.py
-python scripts/scrape_docs.py
+	python scripts/scrape_github.py
+	python scripts/scrape_stackoverflow.py
+	python scripts/scrape_docs.py
 
 2. Data Preprocessing
 
