@@ -1,5 +1,3 @@
-Here’s a complete README.md file for your GitHub repository:
-
 # CodeGen LLM: Building a Code Generation Language Model from Scratch
 
 This project demonstrates the end-to-end process of creating a **Code Generation Large Language Model (LLM)**. From dataset collection to deployment, you'll find everything needed to build and deploy a transformer-based LLM for generating code snippets.
@@ -25,7 +23,7 @@ This project demonstrates the end-to-end process of creating a **Code Generation
 ├── k8s/                   # Kubernetes manifests for deployment
 ├── README.md              # Project documentation
 └── requirements.txt       # Python dependencies
-
+```
 📋 Getting Started
 
 Prerequisites
