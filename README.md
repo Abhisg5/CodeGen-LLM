@@ -57,49 +57,49 @@ Run scripts to scrape data:
 
 2. Data Preprocessing
 
-Preprocess the raw data for training:
+	Preprocess the raw data for training:
 
-python scripts/preprocess_data.py
+		python scripts/preprocess_data.py
 
 3. Model Training
 
-Fine-tune the model using your dataset:
+	Fine-tune the model using your dataset:
 
-python scripts/train_model.py
+		python scripts/train_model.py
 
 4. Deployment
 
-Start the FastAPI server:
+	Start the FastAPI server:
 
-cd api
-uvicorn main:app --host 0.0.0.0 --port 8000
+		cd api
+		uvicorn main:app --host 0.0.0.0 --port 8000
 
 🚢 Deployment with Docker
 
-	1.	Build the Docker image:
+1.	Build the Docker image:
 
-docker build -t codegen-api .
+		docker build -t codegen-api .
 
 
-	2.	Run the container:
+2.	Run the container:
 
-docker run -p 8000:8000 codegen-api
+		docker run -p 8000:8000 codegen-api
 
 ⚙️ Kubernetes Deployment
 
 Deploy the API on Kubernetes:
-
-kubectl apply -f k8s/deployment.yaml
+	
+		kubectl apply -f k8s/deployment.yaml
 
 📈 Future Enhancements
 
-	•	Support for additional programming languages.
-	•	Model optimization with quantization and pruning.
-	•	Enhanced dataset filtering and augmentation.
+•	Support for additional programming languages.
+•	Model optimization with quantization and pruning.
+•	Enhanced dataset filtering and augmentation.
 
 
 🌟 Acknowledgments
 
-	•	Hugging Face Transformers
-	•	CodeSearchNet Dataset
-	•	BigCode Project
+•	Hugging Face Transformers
+•	CodeSearchNet Dataset
+•	BigCode Project
