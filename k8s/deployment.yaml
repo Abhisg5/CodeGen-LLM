@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: codegen-api
+  labels:
+    app: codegen-api
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: codegen-api
+  template:
+    metadata:
+      labels:
+        app: codegen-api
+    spec:
+      containers:
+      - name: codegen-api
+        image: codegen-api:latest
+        ports:
+        - containerPort: 8000
+        resources:
+          requests:
+            memory: "1Gi"
+            cpu: "500m"
+          limits:
+            memory: "2Gi"
+            cpu: "1000m"
+        env:
+        - name: MODEL_PATH
+          value: "/app/models/codegen"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: codegen-api
+spec:
+  selector:
+    app: codegen-api
+  ports:
+  - port: 80
+    targetPort: 8000
+  type: LoadBalancer 

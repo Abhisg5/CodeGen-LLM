@@ -1,20 +1,18 @@
 # CodeGen LLM: Building a Code Generation Language Model from Scratch
 
-This project demonstrates the end-to-end process of creating a **Code Generation Large Language Model (LLM)**. From dataset collection to deployment, you'll find everything needed to build and deploy a transformer-based LLM for generating code snippets.
-
----
+This project demonstrates the end-to-end process of creating a Code Generation Large Language Model (LLM). From dataset collection to deployment, you'll find everything needed to build and deploy a transformer-based LLM for generating code snippets.
 
 ## 🚀 Features
-- **Data Collection**: Scripts to scrape data from GitHub, Stack Overflow, and programming documentation.
-- **Data Preprocessing**: Tokenization, cleaning, and structuring for training.
-- **Training**: Fine-tuning a transformer-based architecture (e.g., GPT-2).
-- **Deployment**: FastAPI-based API for serving code generation, containerized with Docker and scalable via Kubernetes.
-- **Cloud Integration**: Use AWS S3 for storing and retrieving datasets.
 
----
+- **Data Collection**: Scripts to scrape data from GitHub, Stack Overflow, and programming documentation
+- **Data Preprocessing**: Tokenization, cleaning, and structuring for training
+- **Training**: Fine-tuning a transformer-based architecture (e.g., GPT-2)
+- **Deployment**: FastAPI-based API for serving code generation, containerized with Docker and scalable via Kubernetes
+- **Cloud Integration**: Use AWS S3 for storing and retrieving datasets
 
 ## 📂 Project Structure
-```plaintext
+
+```
 ├── data/                  # Raw and processed datasets
 ├── scripts/               # Data scraping and preprocessing scripts
 ├── models/                # Trained model checkpoints
@@ -24,82 +22,90 @@ This project demonstrates the end-to-end process of creating a **Code Generation
 ├── README.md              # Project documentation
 └── requirements.txt       # Python dependencies
 ```
-📋 Getting Started
 
-Prerequisites
+## 📋 Getting Started
 
-	•	Python 3.9+
-	•	Docker
-	•	AWS CLI (for S3 integration)
-	•	Kubernetes (optional for scaling)
+### Prerequisites
 
-Installation
+- Python 3.9+
+- Docker
+- AWS CLI (for S3 integration)
+- Kubernetes (optional for scaling)
 
-1.	Clone the repository:
+### Installation
 
-		git clone https://github.com/your-username/codegen-llm.git
-		cd codegen-llm
+1. Clone the repository:
+```bash
+git clone https://github.com/your-username/codegen-llm.git
+cd codegen-llm
+```
 
+2. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
 
-2.	Install dependencies:
+## 🛠️ Usage
 
-		pip install -r requirements.txt
-
-🛠️ Usage
-
-1. Data Collection
-
+### Data Collection
 Run scripts to scrape data:
+```bash
+python scripts/scrape_github.py
+python scripts/scrape_stackoverflow.py
+python scripts/scrape_docs.py
+```
 
-	python scripts/scrape_github.py
-	python scripts/scrape_stackoverflow.py
-	python scripts/scrape_docs.py
+### Data Preprocessing
+Preprocess the raw data for training:
+```bash
+python scripts/preprocess_data.py
+```
 
-2. Data Preprocessing
+### Model Training
+Fine-tune the model using your dataset:
+```bash
+python scripts/train_model.py
+```
 
-	Preprocess the raw data for training:
+### Deployment
 
-		python scripts/preprocess_data.py
+Start the FastAPI server:
+```bash
+cd api
+uvicorn main:app --host 0.0.0.0 --port 8000
+```
 
-3. Model Training
+## 🚢 Deployment with Docker
 
-	Fine-tune the model using your dataset:
+Build the Docker image:
+```bash
+docker build -t codegen-api .
+```
 
-		python scripts/train_model.py
+Run the container:
+```bash
+docker run -p 8000:8000 codegen-api
+```
 
-4. Deployment
-
-	Start the FastAPI server:
-
-		cd api
-		uvicorn main:app --host 0.0.0.0 --port 8000
-
-🚢 Deployment with Docker
-
-1.	Build the Docker image:
-
-		docker build -t codegen-api .
-
-
-2.	Run the container:
-
-		docker run -p 8000:8000 codegen-api
-
-⚙️ Kubernetes Deployment
+## ⚙️ Kubernetes Deployment
 
 Deploy the API on Kubernetes:
-	
-		kubectl apply -f k8s/deployment.yaml
+```bash
+kubectl apply -f k8s/deployment.yaml
+```
 
-📈 Future Enhancements
+## 📈 Future Enhancements
 
-•	Support for additional programming languages.
-•	Model optimization with quantization and pruning.
-•	Enhanced dataset filtering and augmentation.
+- Support for additional programming languages
+- Model optimization with quantization and pruning
+- Enhanced dataset filtering and augmentation
 
+## 🌟 Acknowledgments
 
-🌟 Acknowledgments
+- Hugging Face Transformers
+- CodeSearchNet Dataset
+- BigCode Project
 
-•	Hugging Face Transformers
-•	CodeSearchNet Dataset
-•	BigCode Project
+## 📝 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
