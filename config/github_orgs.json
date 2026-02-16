@@ -1,0 +1,50 @@
+{
+    "organizations": [
+        {
+            "name": "huggingface",
+            "type": "org",
+            "description": "Transformers, Datasets, and other ML libraries"
+        },
+        {
+            "name": "pytorch",
+            "type": "org",
+            "description": "PyTorch ecosystem and related projects"
+        },
+        {
+            "name": "tensorflow",
+            "type": "org",
+            "description": "TensorFlow ecosystem and related projects"
+        },
+        {
+            "name": "scikit-learn",
+            "type": "org",
+            "description": "Machine learning library for Python"
+        },
+        {
+            "name": "fastai",
+            "type": "org",
+            "description": "Deep learning library and courses"
+        }
+    ],
+    "users": [
+        {
+            "name": "Abhisg5",
+            "type": "user",
+            "description": "Your personal repositories"
+        }
+    ],
+    "repositories": [
+        {
+            "owner": "huggingface",
+            "name": "transformers",
+            "type": "repo",
+            "description": "State-of-the-art Machine Learning for NLP"
+        },
+        {
+            "owner": "pytorch",
+            "name": "pytorch",
+            "type": "repo",
+            "description": "PyTorch main repository"
+        }
+    ]
+} 
